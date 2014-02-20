@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <link href='http://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+    body {
+      background-image: url(http://i.imgur.com/wrzjLkj.gif);
+      padding-left:auto;
+      padding-right:auto;
+      vertical-align: middle;
+      font-family: 'Press Start 2P', cursive;
+      color: yellow;
+      text-align: center;
+    }
+      h1 {
+          line-height: 200px;
+          margin: auto;
+          margin-top: -100px;
+          position: absolute;
+          top: 50%;
+          width: 100%;
+      }
+    </style>
+    <script>
+      window.addEventListener("load", function() {
+          var lines = ["This is a UNIX System.", "I know this."];
+          var currentIndex = 0;
+          var msg = document.querySelector("h1");
+          msg.innerHTML = lines[0];
+          
+          setInterval(function() {
+            currentIndex = currentIndex == 1 ? 0 : 1;
+            msg.innerHTML = lines[currentIndex];
+          }, 2000);
+      });
+    
+    </script>
+  </head>
+  <body>
+    <h1>This is a UNIX system.</h1>
+  </body>
+</html>
